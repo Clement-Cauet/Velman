@@ -50,40 +50,6 @@ form, table {
     margin-left: auto;
 }
 
-/* Full-width inputs */
-input[type=text], input[type=password] {
-    width: 100%;
-    color: white;
-    background: #3b676a;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #2e4f52;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-  }
- 
-/* Set style for all buttons */
-input[type=button] {
-    width: 100%;
-    color: white;
-    background: #3b676a;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    border: 1px solid #2e4f52;
-    border-radius: 10px;
-}
-
-input[type=button]:hover {
-    background-color: #5e8a7d;
-}
-
 table {
     border-collapse: collapse;
 }
@@ -118,4 +84,38 @@ table tr:nth-child(even) {
   
 table tr:hover {
     background-color: #2e4f52;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    color: white;
+    background: #3b676a;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #2e4f52;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+ 
+/* Set style for all buttons */
+input[type=button] {
+    width: 100%;
+    color: white;
+    background: #3b676a;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #2e4f52;
+    border-radius: 10px;
+}
+
+input[type=button]:hover {
+    background-color: #5e8a7d;
 }

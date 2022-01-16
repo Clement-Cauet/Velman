@@ -1,6 +1,7 @@
 document.getElementById('connexion').hidden = false;
 document.getElementById('table').hidden = true;
 
+/* WebSocket connexion */
 document.getElementById('connect').addEventListener('click', function() {
     var serverName  = document.getElementById('serverName').value;
     var hostName    = document.getElementById('hostName').value;
@@ -11,7 +12,7 @@ document.getElementById('connect').addEventListener('click', function() {
     var socket = new WebSocket("ws://"+ serverName +":1234");
 
 
-    // Lorsque la connexion est établie.
+    /* WebSocket open */
     socket.onopen = function() {
         document.getElementById('connexion').hidden = true;
         document.getElementById('table').hidden = false;
@@ -22,7 +23,7 @@ document.getElementById('connect').addEventListener('click', function() {
         console.log("Client WebSocket: Nouvelle connexion");
     };
 
-    // Lorsque la connexion se termine.
+    /* WebSocket close */
     socket.onclose = function() {
         document.getElementById('connexion').hidden = false;
         document.getElementById('table').hidden = true;
@@ -30,13 +31,12 @@ document.getElementById('connect').addEventListener('click', function() {
         console.log("Client WebSocket: Deconnexion");
     };
 
-    // Récupération des erreurs.
-    // Si la connexion ne s'établie pas,
+    /* WebSocket error */
     socket.onerror = function(error) {
         console.error(error);
     };
             
-    // Lorsque le serveur envoi un message.
+    /* Receive message of the server */
     socket.onmessage = function(event) {
         var message = event.data;
         var regex = /[^;]+/g;
@@ -54,6 +54,7 @@ document.getElementById('connect').addEventListener('click', function() {
         tblBody.scrollTop = tblBody.scrollHeight;
     };
 
+    /* WebSocket disconnexion */
     document.getElementById('disconnect').addEventListener('click', function() {
         socket.close();
     });
