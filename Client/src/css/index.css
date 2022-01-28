@@ -51,6 +51,7 @@ form, table {
 }
 
 table {
+    table-layout: fixed;
     border-collapse: collapse;
 }
 
@@ -118,4 +119,19 @@ input[type=button] {
 
 input[type=button]:hover {
     background-color: #5e8a7d;
+}
+
+@media screen and (max-width: 1200px) {
+    #container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #container {
+        width: 80%;
+    }
+    .sub-container {
+        padding: 0;
+    }
 }
