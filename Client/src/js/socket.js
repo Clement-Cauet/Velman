@@ -9,7 +9,7 @@ document.getElementById('connect').addEventListener('click', function() {
     var password    = document.getElementById('password').value;
     var dbName      = document.getElementById('dbName').value;
 
-    var socket = new WebSocket("ws://"+ serverName +":1234");
+    var socket = new WebSocket("ws://"+ serverName +":3002");
 
 
     /* WebSocket open */
