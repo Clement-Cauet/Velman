@@ -52,10 +52,10 @@ void velman::onNewConnection()
 /* Receive message of WebSocket Client */
 void velman::processTextMessage(const QString & message)
 {
-	QString hostName = message.section(";", 0, 0);
-	QString userName = message.section(";", 1, 1);
-	QString password = message.section(";", 2, 2);
-	QString dbName = message.section(";", 3, 3);
+	QString hostName	= message.section(";", 0, 0);
+	QString userName	= message.section(";", 1, 1);
+	QString password	= message.section(";", 2, 2);
+	QString dbName		= message.section(";", 3, 3);
 
 	dbInit(hostName, userName, password, dbName);
 }
@@ -92,9 +92,9 @@ void velman::timerOn()
 /* Recuperation of Velman values and send them to database */
 void velman::insertValue()
 {
-	float bruteValue = card->ReadAnalogChannel(1);
-	float voltageValue = (bruteValue / 255) * 5;
-	float tempValue = (voltageValue * 90 / 5) - 30;
+	float bruteValue	= card->ReadAnalogChannel(1);
+	float voltageValue	= (bruteValue / 255) * 5;
+	float tempValue		= (voltageValue * 90 / 5) - 30;
 
 	QSqlQuery query;
 	query.prepare("INSERT INTO `meteo`(`bruteValue`, `tension`, `temperature`) VALUES(:bruteValue, :voltageValue, :tempValue)");
@@ -107,10 +107,10 @@ void velman::insertValue()
 
 	if (query.next())
 	{
-		QString bruteValue = query.value(0).toString();
-		QString voltageValue = query.value(1).toString();
-		QString tempValue = query.value(2).toString();
-		QString date = query.value(3).toString();
+		QString bruteValue		= query.value(0).toString();
+		QString voltageValue	= query.value(1).toString();
+		QString tempValue		= query.value(2).toString();
+		QString date			= query.value(3).toString();
 
 		QString sendText = bruteValue + ";" + voltageValue + ";" + tempValue + ";" + date;
 
@@ -128,10 +128,10 @@ void velman::selectValue()
 
 	while (query.next()) 
 	{
-		QString bruteValue = query.value(0).toString();
-		QString voltageValue = query.value(1).toString();
-		QString tempValue = query.value(2).toString();
-		QString date = query.value(3).toString();
+		QString bruteValue		= query.value(0).toString();
+		QString voltageValue	= query.value(1).toString();
+		QString tempValue		= query.value(2).toString();
+		QString date			= query.value(3).toString();
 
 		QString sendText = bruteValue + ";" + voltageValue + ";" + tempValue + ";" + date;
 

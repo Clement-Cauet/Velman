@@ -1,6 +1,6 @@
 ﻿  Reading Qt configuration (C:/Qt/5.14.2/msvc2017_32/bin/qmake)
-  moc velman.h
   main.cpp
-  velman.cpp
   moc_velman.cpp
-  Velman.vcxproj -> C:\Users\Clément\source\repos\Velman\Debug\Velman.exe
+  moc_K8055Adapter.cpp
+  LINK : C:\Users\Clément\Desktop\velman\Velman\Server\Debug\Velman.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+  Velman.vcxproj -> C:\Users\Clément\Desktop\velman\Velman\Server\Debug\Velman.exe

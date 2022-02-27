@@ -1,0 +1,8 @@
+﻿  Reading Qt configuration (C:/Qt/5.14.2/msvc2017_64/bin/qmake)
+  moc velman.h
+  moc K8055Adapter.h
+  K8055Adapter.cpp
+  main.cpp
+  velman.cpp
+c:\users\clément\desktop\velman\velman\server\velman\main.cpp(9): error C2374: 'a' : redéfinition ; initialisation multiple (compilation du fichier source main.cpp)
+  c:\users\clément\desktop\velman\velman\server\velman\main.cpp(7): note: voir la déclaration de 'a' (compilation du fichier source main.cpp)
